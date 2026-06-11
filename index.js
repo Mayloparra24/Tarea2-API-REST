@@ -34,6 +34,12 @@ app.get("/campeon/:pais", getByCampeon);
 app.get("/random", random);
 app.get("/search/:text", search);
 
+app.use(express.static("public"));
+
+app.use((req, res) => {
+  res.status(404).json({ error: "Path not found" });
+});
+
 app.listen(PORT, HOST, () => {
   console.log(`Servidor escuchando en http://${HOST}:${PORT}/`);
 });
