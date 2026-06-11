@@ -1,19 +1,29 @@
-import data from "./mundiales.json" with { type: "json" };
+import { DatabaseSync } from "node:sqlite";
+import { cwd } from "node:process";
 
-export const getAll = () => data;
+const db = new DatabaseSync(`${cwd()}/data/mundiales.db`);
 
-export const getBySlug = slug => data.find(item => item.slug === slug);
+export const getAll = () => {
+  const query = db.prepare("SELECT * FROM mundiales");
+  return query.all();
+};
 
-export const getByCampeon = pais => data.filter(item => item.campeon === pais);
+export const getBySlug = slug => {
+  const query = db.prepare("SELECT * FROM mundiales WHERE slug = ?");
+  return query.get(slug);
+};
+
+export const getByCampeon = pais => {
+  const query = db.prepare("SELECT slug FROM mundiales WHERE campeon = ?");
+  return query.all(pais);
+};
 
 export const getRandom = () => {
-  const index = Math.floor(Math.random() * data.length);
-  return data[index];
+  const query = db.prepare("SELECT * FROM mundiales ORDER BY RANDOM() LIMIT 1");
+  return query.get();
 };
 
 export const search = (text) => {
-  const query = text.toLowerCase();
-  return data.filter(item =>
-    JSON.stringify(item).toLowerCase().includes(query)
-  );
+  const query = db.prepare("SELECT * FROM mundiales WHERE nombre LIKE ? OR resumen LIKE ? OR descripcion LIKE ?");
+  return query.all(`%${text}%`, `%${text}%`, `%${text}%`);
 };
