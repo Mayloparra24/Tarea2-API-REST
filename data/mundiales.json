@@ -1,0 +1,80 @@
+[
+  {
+    "nombre": "Copa Mundial Qatar 2022",
+    "anio": 2022,
+    "sede": "Qatar",
+    "campeon": "Argentina",
+    "subcampeon": "Francia",
+    "goleador": "Kylian Mbappé",
+    "equipos": 32,
+    "imagen": "qatar-2022.avif",
+    "slug": "qatar-2022",
+    "resumen": "Argentina campeón tras una final épica ante Francia, terminó ganando en penales.",
+    "descripcion": "Primer Mundial en Medio Oriente; Argentina ganó en penales su tercer título tras una final histórica."
+  },
+  {
+    "nombre": "Copa Mundial Rusia 2018",
+    "anio": 2018,
+    "sede": "Rusia",
+    "campeon": "Francia",
+    "subcampeon": "Croacia",
+    "goleador": "Harry Kane",
+    "equipos": 32,
+    "imagen": "rusia-2018.avif",
+    "slug": "rusia-2018",
+    "resumen": "Francia campeona por segunda vez en su historia.",
+    "descripcion": "Francia se consagró campeona tras vencer a Croacia en la final, con una destacada actuación de su joven promersa Kylian Mbappé."
+  },
+  {
+    "nombre": "Copa Mundial Brasil 2014",
+    "anio": 2014,
+    "sede": "Brasil",
+    "campeon": "Alemania",
+    "subcampeon": "Argentina",
+    "goleador": "James Rodríguez",
+    "equipos": 32,
+    "imagen": "brasil-2014.avif",
+    "slug": "brasil-2014",
+    "resumen": "Alemania campeona tras vencer a Argentina en la final.",
+    "descripcion": "Alemania conquistó su cuarto título mundial con un gol de Mario Götze en la prórroga de la final."
+  },
+  {
+    "nombre": "Copa Mundial Sudáfrica 2010",
+    "anio": 2010,
+    "sede": "Sudáfrica",
+    "campeon": "España",
+    "subcampeon": "Países Bajos",
+    "goleador": "Diego Forlán, Thomas Müller, Wesley Sneijder, David Villa",
+    "equipos": 32,
+    "imagen": "sudafrica-2010.avif",
+    "slug": "sudafrica-2010",
+    "resumen": "España campeona en su primer título mundial.",
+    "descripcion": "España ganó su primer Mundial con un gol de Andrés Iniesta en la prórroga, en una final tensa contra los Países Bajos."
+  },
+  {
+    "nombre": "Copa Mundial Alemania 2006",
+    "anio": 2006,
+    "sede": "Alemania",
+    "campeon": "Italia",
+    "subcampeon": "Francia",
+    "goleador": "Miroslav Klose",
+    "equipos": 32,
+    "imagen": "alemania-2006.avif",
+    "slug": "alemania-2006",
+    "resumen": "Italia campeona tras vencer a Francia en penales.",
+    "descripcion": "Italia conquistó su cuarto título en una final memorable definida por penales, con el recordado incidente de Zidane."
+  },
+  {
+    "nombre": "Copa Mundial Corea-Japón 2002",
+    "anio": 2002,
+    "sede": "Corea del Sur y Japón",
+    "campeon": "Brasil",
+    "subcampeon": "Alemania",
+    "goleador": "Ronaldo",
+    "equipos": 32,
+    "imagen": "corea-japon-2002.avif",
+    "slug": "corea-japon-2002",
+    "resumen": "Brasil campeona con un histórico Ronaldo siendo goleador.",
+    "descripcion": "Brasil ganó su quinta estrella con una brillante actuación de Ronaldo, que marcó dos goles en la final ante Alemania."
+  }
+]
