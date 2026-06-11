@@ -28,7 +28,11 @@ app.get("/", (req, res) => {
 });
 
 app.get("/mundiales", (req, res) => {
-  res.json(data.map(item => item.slug));
+  const isFull = req.query.include === "full";
+  const contents = isFull
+    ? data
+    : data.map(item => item.slug);
+  res.json(contents);
 });
 
 app.get("/mundial/:slug", (req, res) => {
@@ -38,6 +42,32 @@ app.get("/mundial/:slug", (req, res) => {
     return notFound(res, "Mundial no encontrado");
 
   res.json(mundial);
+});
+
+app.get("/campeon/:pais", (req, res) => {
+  const mundiales = data
+    .filter(item => item.campeon === req.params.pais)
+    .map(item => item.slug);
+
+  res.json(mundiales);
+});
+
+app.get("/random", (req, res) => {
+  const i = Math.floor(Math.random() * data.length);
+  res.json(data[i]);
+});
+
+app.get("/search/:text", (req, res) => {
+  const query = req.params.text.toLowerCase();
+
+  const results = data
+    .filter(mundial => {
+      const json = JSON.stringify(mundial).toLowerCase();
+      return json.includes(query);
+    })
+    .map(mundial => mundial.slug);
+
+  res.json(results);
 });
 
 app.listen(PORT, HOST, () => {
